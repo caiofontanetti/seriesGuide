@@ -1,13 +1,48 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>SeriesGuide</title>
+ <!-- <title>SeriesGuide</title> -->
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+  <meta name="google-signin-client_id" content="1036457154621-qbu0nim6gcc3sivctt7po5q1jbl3d0o6.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+
+
+
+<body class="mat-typography">
   <app-root></app-root>
 </body>
+
+
+<!-- <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+  
+  BasicProfile.getId()
+
+  if (auth2.isSignedIn.get()) {
+  var profile = auth2.currentUser.get().getBasicProfile();
+  console.log('ID: ' + profile.getId());
+  console.log('Full Name: ' + profile.getName());
+  console.log('Given Name: ' + profile.getGivenName());
+  console.log('Family Name: ' + profile.getFamilyName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+</script> -->
+
+
+
 </html>

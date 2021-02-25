@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+  <h1>Séries</h1>
+
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="assets/images/lucifer.jpeg" alt="Avatar" style="width: 100%">
+        <h3>Lucifer</h3>
+        <p>Mistério, Policial, Ação, Comédia</p>
+        <div class="selection">
+          <button class="button-vote pure-button"> <span (click)="countClick1()">Votar</span></button>
+          <div class="divider"></div>
+          <button class="button-add pure-button">+ Minha lista</button>
+          <div class="play-container">
+            <p>Votos: {{ counter1 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="assets/images/strangerthings.jpeg" alt="Avatar" style="width: 100%">
+        <h3>Stranger Things</h3>
+        <p>Terror</p>
+        <div class="selection">
+          <button class="button-vote pure-button"> <span (click)="countClick2()">Votar</span></button>
+          <div class="divider"></div>
+          <button class="button-add pure-button">+ Minha lista</button>
+          <div class="play-container">
+            <p>Votos: {{ counter2 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="https://img.elo7.com.br/product/original/1E0EB0A/poster-cartaz-narcos-netflix-poster-tematico.jpg"
+          alt="Avatar" style="width: 100%">
+        <h3>Narcos</h3>
+        <p>Ação e aventura</p>
+        <div class="selection">
+          <button class="button-vote pure-button"> <span (click)="countClick3()">Votar</span></button>
+          <div class="divider"></div>
+          <button class="button-add pure-button">+ Minha lista</button>
+          <div class="play-container">
+            <p>Votos: {{ counter3 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="https://i.pinimg.com/originals/0d/e1/ce/0de1cecfd7139dc94b15da7c73525263.jpg" alt="Avatar"
+          style="width: 100%">
+        <h3>Daredevil</h3>
+        <p>Ação; Policial; Drama; Suspense</p>
+        <div class="row">
+          <div class="selection">
+            <button class="button-vote pure-button"> <span (click)="countClick4()">Votar</span></button>
+            <div class="divider"></div>
+            <button class="button-add pure-button">+ Minha lista</button>
+            <div class="play-container">
+              <p>Votos: {{ counter4 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
+
+
+<!-- <ul *ngIf="brews">
+    <li *ngFor="let brew of brews">
+      <p class="name">{{ brew.name }}</p>
+      <p class="aaa">{{ brew.runtime }} minutes</p>
+      <p class="genres">{{ brew.show.genres }}</p>
+      <a class="site" href="{{ brew.url }}">site</a>
+    </li>
+  </ul> -->

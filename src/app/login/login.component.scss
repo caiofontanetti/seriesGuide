@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    height: 1000px;
+    margin: auto;
+    align-items: center;
+    
+}
+
+.card {
+    background: orange;
+    width: 50%;
+    height: 20em;
+    align-items: center;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.column {
+    background-color: white;
+    margin: auto;
+    height: auto;
+    width: 50%;
+    border-radius: 1em;
+    border-color: black;
+    border-width: 3em;
+}
+
+h3 {
+        text-align: center;
+        
+}
+
+p {
+        text-align: center;
+}
+
+.g-signin2 {
+    align-content: center;
+    margin: 0px 60px;
+}
+
