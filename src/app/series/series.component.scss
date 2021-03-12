@@ -1,3 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+
 body {
     padding-top: 100px;
+    font-family: 'Nunito', 'sans-serif';
+    background-color: rgba(0, 0, 0, 0.945);
 }
+
+.cards {
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    min-width: 400px;
+    max-width: 400px;
+    height: auto;
+    border-style: solid;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+/* Column Gap */
+.cards > * {
+    box-sizing: border-box;
+  }
+  .cards > *:not(:last-child) {
+    margin-right: 32px;
+  }
+  /* Item sizing */
+  .cards {
+    flex: 0 1 calc(33.3% - 11px);
+  }
+
+  .cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 70px 50px;
+  }
+  /* Column Gap */
+  .cardList > * {
+    box-sizing: border-box;
+  }
+  .cardList > *:not(:last-child) {
+    margin-right: 32px;
+  }
+  /* Item sizing */
+  .cardListItem {
+    flex: 0 1 calc(33.3% - 32px);
+    margin-bottom: 50px;
+    border-radius: 5px;
+    background-color: rgb(211, 206, 206);
+      }
+  /* medium size viewport */
+  @media screen and (max-width: 959px) {
+    /* Column Gap */
+    .cardList > *:not(:last-child) {
+      margin-right: 32px;
+    }
+    /* Item sizing */
+    .cardListItem {
+      flex: 0 1 calc(50% - 32px);
+      margin-bottom: 50px;
+    }
+  }
+  /* small size viewport */
+  @media screen and (max-width: 599px) {
+    .cardList {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .cardList > *:not(:last-child) {
+      margin-right: unset;
+      margin-bottom: 32px;
+    }
+  }
+
+  .synopsis { 
+    padding-top: auto;
+    //margin-top: 10em;
+    display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-family: 'Nunito', 'sans-serif';
+   p {
+    font-size: 16px; 
+    margin: 0px 16px;
+    text-indent: 3ch;
+    text-align: justify;
+  }
+  max-height: max-content;
+  }
+
+  .synopsis:hover {
+    white-space: unset;
+    text-overflow: unset;
+    width: 100%;
+    display: -webkit-flex;
+ }
+
+ .generos {
+  height: 80px;
+
+   li {
+    font-size: 18px;
+    padding-top: 5px;
+    font-weight: lighter;
+    //padding-bottom: 10px;
+  }
+ }
+
+ .images {
+   margin: 0 10%;
+   width: 80%;
+   height: 468px;
+   display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+
+ h1 {
+   padding-top: 20px;
+   text-align: center;
+   font-family: 'Nunito', 'sans-serif';
+   font-size: 32px;
+   font-weight: 600;
+   //font-variant: small-caps;
+ }
+
+ ul{
+   font-family: 'Nunito', 'sans-serif';
+   padding-left: 10px;
+   font-size: 18px; 
+ }
+
+ .gen{
+  font-family: 'Nunito', 'sans-serif';
+  margin: 0 -28px;
+  font-size: 20px;
+  font-weight: bold; 
+ }
+
+ .card-content {
+   min-height: 100px;
+   h2 {
+     margin: 0px 16px;
+   }
+ }
+
+ .card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+   button {
+     margin: 0px 16px 10px;
+     background-color: rgba(0, 0, 0, 0.945);
+     color: white;
+   }
+ }
+
+ .search-container {
+   margin-right: 67px;
+  float: right;
+}
+
+.input-text[type=text] {
+  font-family: 'Nunito', 'sans-serif';
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 18px;
+  border-radius: 3px 0px 0px 3px;
+  border: none;
+}
+
+ .search-container button {
+  font-family: 'Nunito', 'sans-serif';
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 18px;
+  border-radius: 0px 3px 3px 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+

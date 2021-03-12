@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-
+  <title>Lista de Séries</title>
 </head>
 
 <body>
@@ -9,9 +10,10 @@
   <h1>Séries</h1>
 
 
-  <div class="row">
+  <div fxLayout="row" fxLayoutAlign="space-evenly center" style="padding: 2%;">
     <div class="column">
-      <div class="card">
+      <div class="card" fxFlex="0 1 calc(33.3% - 11px)"
+      fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
         <img src="assets/images/lucifer.jpeg" alt="Avatar" style="width: 100%">
         <h3>Lucifer</h3>
         <p>Mistério, Policial, Ação, Comédia</p>
@@ -20,6 +22,7 @@
           <div class="divider"></div>
           <button class="button-add pure-button">+ Minha lista</button>
           <div class="play-container">
+            <br>
             <p>Votos: {{ counter1 }}</p>
           </div>
         </div>
@@ -36,6 +39,7 @@
           <div class="divider"></div>
           <button class="button-add pure-button">+ Minha lista</button>
           <div class="play-container">
+            <br>
             <p>Votos: {{ counter2 }}</p>
           </div>
         </div>
@@ -53,6 +57,7 @@
           <div class="divider"></div>
           <button class="button-add pure-button">+ Minha lista</button>
           <div class="play-container">
+            <br>
             <p>Votos: {{ counter3 }}</p>
           </div>
         </div>
@@ -71,6 +76,7 @@
             <div class="divider"></div>
             <button class="button-add pure-button">+ Minha lista</button>
             <div class="play-container">
+              <br>
               <p>Votos: {{ counter4 }}</p>
             </div>
           </div>

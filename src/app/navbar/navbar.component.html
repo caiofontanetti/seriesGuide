@@ -1,17 +1,38 @@
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 </head>
 
 <header class="header">
-    <mat-toolbar>
-        <!-- <img class="logo-image"  src="/assets/logo.png" href=""> -->
-        <span mat-button class="logo">SeriesGuide</span>
+  <mat-toolbar>
+    <!-- <img class="logo-image"  src="/assets/logo.png" href=""> -->
+    <span mat-button class="logo">SeriesGuide</span>
 
-        <div class="spacer"></div>
+    <div class="spacer"></div>
 
-        <a mat-button routerLink=""> Home</a>
-        <a mat-button routerLink="series"> Séries</a>
-        <a mat-button routerLink="list"> List</a>
-        <a mat-raised-button routerLink="login"> Login</a>
-    </mat-toolbar>
+    <a mat-button routerLink=""> Home</a>
+    <a mat-button routerLink="series"> Séries</a>
+    <a mat-button routerLink="list"> List</a>
+
+
+    <!-- Área de login-->
+    <ng-template #anonymousUser>
+      <a mat-raised-button routerLinkActive="active current" routerLink="/admin/login"
+        [matMenuTriggerFor]="menu">Login</a>
+    </ng-template>
+    <div class="dropdown-content" *ngIf="auth.userApp | async as user; else anonymousUser" class="nav-item
+              dropdown">
+      <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false" style="cursor: pointer;">{{user.name}}</a>
+
+      <div class="dropdown-content" aria-labelledby="dropdown01" style="left: -90px !important;">
+        <a *ngIf="user.isAdmin" class="dropdown-item" routerLink="auth/ex-admin">Admin</a>
+        <a class="dropdown-item" routerLink="/auth/ex-logado">Perfil</a>
+        <a class="dropdown-item" routerLink="auth/ex-aberto">Exemplo Aberto</a>
+        <a class="dropdown-item" routerLink="#" (click)="logout()">Logout</a>
+      </div>
+    </div>
+
+
+
+  </mat-toolbar>
 </header>

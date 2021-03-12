@@ -17,9 +17,10 @@ body{
     margin: 0;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    background: rgba(0, 0, 0, 0.945);
+    background-color: rgba(0, 0, 0, 0.945);
     padding-top: 100px;
   }
   

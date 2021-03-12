@@ -1,21 +1,28 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+
 
 </head>
 
 <body>
 
+
+
     <h1> Seja bem vindo</h1>
 
-        <div class="column">
-            <div class="card">
-                <h3>Seja muito bem-vindo</h3>
-                <p>Para acessar a plataforma, é necessário fazer o login com o a sua conta Google</p>
-                <div class="g-signin2" data-width="230" data-height="50" data-longtitle="true" data-onsuccess="onSignIn"></div>
-            </div>
+    <div class="column">
+        <div class="card">
+            <h3>Seja muito bem-vindo</h3>
+            <p>Para acessar a plataforma, é necessário fazer o login com a sua conta Google</p>
+            <h3 class="mt-5 mb-3">Login</h3>
+            <button (click)="login()" class="btn"><img class="image"
+                    src="/assets/images/google.png" /><span class="text">Login</span> </button>
         </div>
-    
+    </div>
+
+    <!-- <div class="g-signin2" data-width="230" data-height="50" data-longtitle="true" data-onsuccess="onSignIn"></div> -->
 
 </body>
 

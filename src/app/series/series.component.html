@@ -2,37 +2,91 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Séries</title>
 </head>
 
 <body>
-    <p>series works!</p>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" style="padding: 2%;">
-        <div style="margin: 0.5%;">
 
-            <mat-card class="example-card" 
-            fxFlex="0 1 calc(33.3% - 11px)" 
-            fxFlex.lt-md="0 1 calc(50% - 11px)"
-            fxFlex.lt-sm="100%">
+    <div class="search-container">
+        <form action="/action_page.php">
+          <input class="input-text"type="text" placeholder="Pesquisar.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    <!-- <div class="cardList">
+         <ng-container *ngFor="let _ of [1,2,3,4,5,6,7,8,9]">
+           <mat-card class="cardListItem"></mat-card>
+         </ng-container>
+       </div> -->
+
+    <!-- <div fxLayout="row" fxLayoutAlign="space-around center" style="padding: 2%;"> -->
+    <div class="cardList">
+        <ng-container *ngFor="let s of series" style="margin: 0.5%; padding: 2%;">
+            <mat-card class="cardListItem">
+
+                <img class="images" src="{{s.poster_path}}" alt="{{imageAlt}}" />
+                <h1>{{s.original_name}}</h1>
                 <mat-card-header>
+                    <ul>
+                        <li>Id: {{s.id}}</li>
+                        <li>Nota: {{s.vote_average}}</li>
+                        <li>Votos: {{s.vote_count}}</li>
+                        <li>Data de lançamento: {{s.first_air_date | date:"dd/MM/yyyy" | uppercase}}</li>
 
+
+                        <!-- <div *ngFor="let y of dataS">
+                        <li>Ano: {{y.first_air_date"}} </li>
+                    </div> -->
+                        <br>
+                        <p class="gen">Gêneros:</p>
+                        <div class="generos">
+                            <ul *ngFor="let g of s?.genres">
+                                <li>{{g.name}}</li>
+                            </ul>
+                        </div>
+                    </ul>
                 </mat-card-header>
-                <mat-card-content>
-                    <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
-                    </p>
+                <mat-card-content class="card-content">
+
+                    <h2>Sinopse : </h2>
+                    <div class="synopsis">
+                        <p> {{s.overview}} </p>
+                    </div>
                 </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button>LIKE</button>
-                    <button mat-button>SHARE</button>
+                <mat-card-actions class="card-actions">
+                    <button mat-raised-button>VOTAR</button>
+                    <button mat-raised-button>DETALHES</button>
                 </mat-card-actions>
             </mat-card>
 
-        </div>
+
+
+        </ng-container>
     </div>
+    <!-- </div> -->
+
+    <button><span (click)="getPage()">PRÓXIMA PÁGINA</span></button>
+    <p style="color: white;">{{page}}</p>
+
+
+
 </body>
 
 
 </html>
+
+
+
+<!-- <ul *ngFor="let s of series">
+        <li *ngFor="let s of series?.results">
+        <li>
+            <p class="name">{{ s.name }}</p>
+            <p class="id">{{ s.id }}</p>
+        </li>
+        <p>Gênero: </p>
+        <li *ngFor="let g of s.genres">
+            ---- {{g.name}}
+        </li>
+
+    </ul> -->
