@@ -21,6 +21,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { SeriesComponent } from './series/series.component';
 import { SerieService } from './serie.service';
 import { AngularFireModule } from '@angular/fire';
@@ -47,6 +48,7 @@ import { environment } from 'src/environments/environment';
     MatButtonModule,
     MatCardModule,
     MatMenuModule,
+    MatSidenavModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,

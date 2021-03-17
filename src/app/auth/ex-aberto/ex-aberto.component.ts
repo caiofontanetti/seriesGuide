@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ex-aberto.component.scss']
 })
 export class ExAbertoComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {

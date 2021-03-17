@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
+  showFiller = false;
   counter1: number = 0;
   counter2: number = 0;
   counter3: number = 0;
